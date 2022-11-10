@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "white-sol": "#FAFBFD",
         "dark-blue": "#03142A",
+        "scnd-blue": "#16263B",
         "orange-sol": "#E56137",
       },
       fontFamily: {

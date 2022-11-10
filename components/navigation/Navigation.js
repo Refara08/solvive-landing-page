@@ -19,7 +19,7 @@ const Navigation = () => {
         <Hamburger
           toggle={setBurgerIsOpen}
           toggled={burgerIsOpen}
-          color="#FAFBFD"
+          color={burgerIsOpen ? "#E56137" : "#FAFBFD"}
           size={24}
         />
       </div>

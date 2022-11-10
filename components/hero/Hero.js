@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section id="hero" className="grid grid-cols-6 pt-12">
+    <section id="hero" className="grid grid-cols-6 pt-12 mb-24">
       <div className="col-span-4">
         <div className="mb-8">
           <h1 className="text-2xl  font-montserrat font-extrabold mb-4">
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
         <a
           href=""
-          className="bg-orange-sol py-3 px-5 rounded-lg text-lg hover:bg-opacity-90 transition duration-300 font-bold"
+          className="inline-block bg-orange-sol py-3 px-5 rounded-lg text-lg hover:scale-105 origin-bottom-left transition duration-300 font-bold"
         >
           Hire us!!
         </a>
