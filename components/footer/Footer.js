@@ -1,0 +1,31 @@
+import Image from "next/image";
+
+const Footer = () => {
+  return (
+    <section id="footer" className="bg-scnd-blue px-4 overflow-hidden">
+      <div className="container mx-auto grid grid-cols-2">
+        <div className="flex flex-col gap-4 py-12">
+          <h3 className="text-2xl font-bold">Anything we can help with?</h3>
+          <p>
+            We are available to assist you through Whatsapp if you have any
+            questions about our services
+          </p>
+          <button className="bg-orange-sol py-2 px-5 rounded-md text-lg font-bold max-w-fit hover:scale-105 transition duration-300 origin-top">
+            Contact us!
+          </button>
+        </div>
+        <div className="relative">
+          <Image
+            src="/images/footer-saly.png"
+            alt="grumpy guy holding laptop"
+            width={"687"}
+            height={"636"}
+            className="absolute bottom-0 right-0 scale-125 sm:scale-105 origin-bottom"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;

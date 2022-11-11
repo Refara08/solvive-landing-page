@@ -178,7 +178,7 @@ const ContactForm = () => {
       <button
         className={`${
           loading ? "bg-blue-400" : "bg-orange-sol"
-        } font-bold w-full py-3 rounded-b-md transition duration-300 ${
+        } font-bold w-full py-3 rounded-b-md transition duration-300 hover:scale-105 origin-top ${
           error || success ? "rounded-t-none" : "rounded-t-md"
         }`}
       >
