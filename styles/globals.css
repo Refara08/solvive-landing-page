@@ -29,3 +29,32 @@ a {
 .container-default {
   @apply container mx-auto px-6;
 }
+
+.input-control {
+  @apply flex flex-col gap-2 mb-8;
+}
+
+.input-control label {
+  @apply font-semibold;
+}
+
+.input-control input,
+.input-control textarea {
+  @apply bg-scnd-blue py-2 px-4 rounded-md text-sm focus:bg-orange-sol focus:text-white-sol focus:outline-none focus:placeholder:text-white-sol;
+}
+
+.checkbox-control {
+  @apply mb-8 relative;
+}
+
+.checkbox-control h4 {
+  @apply font-semibold mb-2;
+}
+
+.checkbox-control input {
+  @apply invisible absolute top-0;
+}
+
+.checkbox-control label {
+  @apply flex items-center justify-center h-full text-sm py-2 px-5 rounded-md cursor-pointer hover:bg-orange-sol transition duration-300;
+}

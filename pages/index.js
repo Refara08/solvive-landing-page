@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Contacts from "../components/contacts/Contacts";
 import Hero from "../components/hero/Hero";
 import Services from "../components/services/Services";
 import Workflow from "../components/workflow/Workflow";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Workflow />
+      <Contacts />
     </div>
   );
 }
