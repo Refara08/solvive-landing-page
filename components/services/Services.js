@@ -1,9 +1,10 @@
-import ServiceCard from "./ServiceCard";
+import Card from "../ui/Card";
 
 const Services = () => {
   const servicesCopy = [
     {
-      text: "Landing Page Website",
+      num: "",
+      text: "Website Services",
       desktop: {
         img: "/images/service1-desktop.png",
         width: "477",
@@ -16,7 +17,8 @@ const Services = () => {
       },
     },
     {
-      text: "Android-iOS Mobile App",
+      num: "",
+      text: "Mobile App Services",
       desktop: {
         img: "/images/service2-desktop.png",
         width: "384",
@@ -29,6 +31,7 @@ const Services = () => {
       },
     },
     {
+      num: "",
       text: "UI-UX Design Services",
       desktop: {
         img: "/images/service3-desktop.png",
@@ -44,7 +47,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services">
+    <section id="services" className="mb-24">
       <div className="mb-8">
         <h2 className="text-xl font-bold">Our Services</h2>
         <p className="text-sm font-light">
@@ -52,7 +55,7 @@ const Services = () => {
         </p>
       </div>
       {servicesCopy.map((item, index) => (
-        <ServiceCard item={item} key={index} />
+        <Card item={item} key={index} />
       ))}
     </section>
   );

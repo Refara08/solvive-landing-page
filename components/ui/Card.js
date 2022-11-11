@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const ServiceCard = ({ item }) => {
+const Card = ({ item }) => {
   const [isHover, setIsHover] = useState(false);
 
   const onHoverHandler = () => {
@@ -20,13 +20,16 @@ const ServiceCard = ({ item }) => {
         isHover ? "bg-orange-sol" : "bg-scnd-blue"
       } mb-6 grid grid-cols-5 items-center h-[100px] overflow-hidden rounded-xl transition duration-300`}
     >
-      <h3
-        className={`px-6 col-span-3 font-bold ${
-          isHover && "scale-105"
-        } transition duration-300 origin-left`}
-      >
-        {item.text}
-      </h3>
+      <div className="px-6 col-span-3">
+        {item.num && <h2 className="font-extrabold ">{item.num}</h2>}
+        <h3
+          className={`leading-5 ${
+            isHover && "scale-105"
+          } transition duration-300 origin-left`}
+        >
+          {item.text}
+        </h3>
+      </div>
       <div className="relative col-span-2 h-full w-full">
         <div className="hidden lg:block ">
           <Image
@@ -52,4 +55,4 @@ const ServiceCard = ({ item }) => {
   );
 };
 
-export default ServiceCard;
+export default Card;
