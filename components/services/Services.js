@@ -36,7 +36,7 @@ const Services = () => {
       desktop: {
         img: "/images/service3-desktop.png",
         width: "453",
-        height: "450",
+        height: "393",
       },
       mobile: {
         img: "/images/service3-mobile.png",

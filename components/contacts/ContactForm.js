@@ -18,7 +18,7 @@ const ContactForm = () => {
     if (success) {
       setTimeout(() => {
         setSuccess("");
-      }, 3000);
+      }, 5000);
     }
 
     if (error) {
@@ -64,7 +64,7 @@ const ContactForm = () => {
         "Your project request has been sent!, we will reach you out through email for further steps!"
       );
       setLoading(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
@@ -174,12 +174,12 @@ const ContactForm = () => {
           />
         </div>
         {error && (
-          <p className="text-sm text-white-sol bg-red-600 rounded-t-lg py-2 px-4 text-center">
+          <p className="text-sm bg-white-sol text-red-600 rounded-t-lg py-2 px-4 text-center">
             {error}
           </p>
         )}
         {success && (
-          <p className="text-sm text-white-sol bg-green-600 rounded-t-lg py-2 px-4 text-center">
+          <p className="text-sm bg-white-sol text-green-600 rounded-t-lg py-2 px-4 text-center">
             {success}
           </p>
         )}

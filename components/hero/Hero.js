@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -16,21 +17,20 @@ const Hero = () => {
             and at your convenience
           </p>
         </div>
-        <a
-          href=""
-          className="inline-block bg-orange-sol py-3 px-5 rounded-lg text-lg hover:scale-105 origin-bottom-left transition duration-300 font-bold"
-        >
-          Hire us!!
-        </a>
+        <Link href="/#contacts" legacyBehavior>
+          <a className="inline-block bg-orange-sol py-3 px-5 rounded-lg text-lg hover:scale-105 origin-bottom-left transition duration-300 font-bold">
+            Hire us!!
+          </a>
+        </Link>
       </div>
       <div className="relative col-span-2 xl:col-span-1">
-        <div className="absolute -top-8 md:top-0 -left-16 lg:left-0 xl:top-10 xl:left-12">
+        <div className="absolute -top-8 md:top-0 -left-16 lg:left-0 xl:-top-32 xl:left-12 -z-10">
           <Image
             src="/images/saly-mobile.png"
             alt="girl riding rocket"
-            width="250"
-            height="250"
-            className="origin-top-left scale-110 md:origin-bottom-right md:scale-125 xl:scale-150 "
+            width="1000"
+            height="1000"
+            className="origin-top-left scale-110 md:origin-bottom-right md:scale-125 xl:origin-top-left xl:scale-100 xl:-translate-x-28"
           />
         </div>
       </div>

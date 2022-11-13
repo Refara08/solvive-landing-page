@@ -6,7 +6,7 @@ const Footer = () => {
       id="footer"
       className="bg-scnd-blue px-4 md:px-12 lg:px-24 overflow-hidden"
     >
-      <div className="container mx-auto grid grid-cols-2">
+      <div className="w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] mx-auto grid grid-cols-2">
         <div className="flex flex-col gap-4 py-12">
           <h3 className="text-2xl lg:text-3xl font-bold">
             Anything we can help with?
