@@ -49,14 +49,16 @@ const Services = () => {
   return (
     <section id="services" className="mb-24">
       <div className="mb-8">
-        <h2 className="text-xl font-bold">Our Services</h2>
+        <h2 className="heading">Our Services</h2>
         <p className="text-sm font-light">
           We are accelerating your digital needs
         </p>
       </div>
-      {servicesCopy.map((item, index) => (
-        <Card item={item} key={index} />
-      ))}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {servicesCopy.map((item, index) => (
+          <Card item={item} key={index} />
+        ))}
+      </div>
     </section>
   );
 };

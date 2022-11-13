@@ -11,6 +11,7 @@ const Social = ({ item }) => {
       rel="noopener noreferrer"
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      className="flex items-center gap-4"
     >
       <span
         className={`block w-[40px] aspect-square ${
@@ -19,7 +20,13 @@ const Social = ({ item }) => {
       >
         <Image src={item.icon} alt={item.tag} width="108" height="108" />
       </span>
-      <span className="hidden md:block">{item.info}</span>
+      <span
+        className={`hidden lg:block origin-left transition duration-300 ${
+          isHover && "scale-105"
+        }`}
+      >
+        {item.info}
+      </span>
     </a>
   );
 };

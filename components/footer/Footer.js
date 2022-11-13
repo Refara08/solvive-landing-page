@@ -2,11 +2,16 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <section id="footer" className="bg-scnd-blue px-4 overflow-hidden">
+    <section
+      id="footer"
+      className="bg-scnd-blue px-4 md:px-12 lg:px-24 overflow-hidden"
+    >
       <div className="container mx-auto grid grid-cols-2">
         <div className="flex flex-col gap-4 py-12">
-          <h3 className="text-2xl font-bold">Anything we can help with?</h3>
-          <p>
+          <h3 className="text-2xl lg:text-3xl font-bold">
+            Anything we can help with?
+          </h3>
+          <p className="xl:text-lg">
             We are available to assist you through Whatsapp if you have any
             questions about our services
           </p>
@@ -20,7 +25,7 @@ const Footer = () => {
             alt="grumpy guy holding laptop"
             width={"687"}
             height={"636"}
-            className="absolute bottom-0 right-0 scale-125 sm:scale-105 origin-bottom"
+            className="absolute bottom-0 right-0 scale-125 sm:scale-105 md:scale-90 lg:scale-[65%] xl:scale-[45%] origin-bottom"
           />
         </div>
       </div>

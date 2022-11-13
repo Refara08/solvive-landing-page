@@ -6,7 +6,7 @@ const Navigation = () => {
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
 
   return (
-    <div className="py-2">
+    <div className="py-2 md:py-4">
       <div className="container-default flex justify-between items-center">
         <div>
           <Image
@@ -16,12 +16,24 @@ const Navigation = () => {
             height="16"
           />
         </div>
-        <Hamburger
-          toggle={setBurgerIsOpen}
-          toggled={burgerIsOpen}
-          color={burgerIsOpen ? "#E56137" : "#FAFBFD"}
-          size={24}
-        />
+        <div className="block md:hidden">
+          <Hamburger
+            toggle={setBurgerIsOpen}
+            toggled={burgerIsOpen}
+            color={burgerIsOpen ? "#E56137" : "#FAFBFD"}
+            size={24}
+          />
+        </div>
+        <ul className="hidden md:flex gap-4 items-center">
+          {["Our Services", "How we work"].map((item, index) => (
+            <li
+              key={index}
+              className="relative before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-white-sol before:w-0 hover:before:w-full before:hover:transition-all before:hover:duration-300 py-2 cursor-pointer text-xs lg:text-sm"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -23,9 +23,11 @@ const ContactSocials = () => {
   ];
 
   return (
-    <div className="mb-24">
-      <h3 className="font-bold text-xl text-center mb-8">Stay Get In Touch</h3>
-      <div className="flex justify-center gap-6">
+    <div className="mb-16 lg:col-span-1">
+      <h3 className="heading text-center lg:text-left mb-8">
+        Stay Get In Touch
+      </h3>
+      <div className="flex lg:flex-col justify-center gap-6">
         {socials.map((item, index) => (
           <Social item={item} key={index} />
         ))}

@@ -49,14 +49,16 @@ const Workflow = () => {
   return (
     <section id="workflow" className="mb-24">
       <div className="mb-8">
-        <h2 className="text-xl font-bold">How We Work</h2>
+        <h2 className="heading">How We Work</h2>
         <p className="text-sm font-light">
           We are working in an Agile/Scrum development process
         </p>
       </div>
-      {workflowCopy.map((item, index) => (
-        <Card item={item} key={index} />
-      ))}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        {workflowCopy.map((item, index) => (
+          <Card item={item} key={index} />
+        ))}
+      </div>
     </section>
   );
 };
