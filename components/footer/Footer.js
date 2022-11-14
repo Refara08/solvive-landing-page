@@ -21,7 +21,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="bg-orange-sol py-2 px-5 rounded-md text-lg font-bold max-w-fit hover:scale-105 transition duration-300 origin-top"
           >
-            Contact us!
+            Contact us!!
           </a>
         </div>
         <div className="relative">
