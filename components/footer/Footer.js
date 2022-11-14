@@ -15,9 +15,14 @@ const Footer = () => {
             We are available to assist you through Whatsapp if you have any
             questions about our services
           </p>
-          <button className="bg-orange-sol py-2 px-5 rounded-md text-lg font-bold max-w-fit hover:scale-105 transition duration-300 origin-top">
+          <a
+            href="https://wa.me/6285156874278"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-orange-sol py-2 px-5 rounded-md text-lg font-bold max-w-fit hover:scale-105 transition duration-300 origin-top"
+          >
             Contact us!
-          </button>
+          </a>
         </div>
         <div className="relative">
           <Image

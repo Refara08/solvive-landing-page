@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
+import Link from "next/link";
+
+const navCopy = [
+  { text: "Our Services", link: "/#services" },
+  { text: "How we work", link: "/#workflow" },
+];
 
 const Navigation = () => {
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
@@ -25,12 +31,12 @@ const Navigation = () => {
           />
         </div>
         <ul className="hidden md:flex gap-4 items-center">
-          {["Our Services", "How we work"].map((item, index) => (
+          {navCopy.map((item, index) => (
             <li
               key={index}
               className="relative before:absolute before:bottom-0 before:left-0 before:h-[2px] before:bg-white-sol before:w-0 hover:before:w-full before:hover:transition-all before:hover:duration-300 py-2 cursor-pointer text-xs lg:text-sm"
             >
-              {item}
+              <Link href={item.link}>{item.text}</Link>
             </li>
           ))}
         </ul>
