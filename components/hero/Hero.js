@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="grid grid-cols-6 lg:grid-cols-5 xl:grid-cols-2 pt-12 mb-24"
+      className="grid grid-cols-6 lg:grid-cols-5 xl:grid-cols-2 py-12 lg:py-24 mb-12 md:mb-24"
     >
       <div className="col-span-4 lg:col-span-3 xl:col-span-1 md:w-[80%] lg:w-[75%] xl:w-full">
         <div className="mb-8">
@@ -31,6 +31,7 @@ const Hero = () => {
             width="1000"
             height="1000"
             className="origin-top-left scale-110 md:origin-bottom-right md:scale-125 xl:origin-top-left xl:scale-100 xl:-translate-x-28"
+            priority={true}
           />
         </div>
       </div>

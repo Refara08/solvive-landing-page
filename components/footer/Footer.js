@@ -31,6 +31,7 @@ const Footer = () => {
             width={"687"}
             height={"636"}
             className="absolute bottom-0 right-0 scale-125 sm:scale-105 md:scale-90 lg:scale-[65%] xl:scale-[45%] origin-bottom"
+            priority={true}
           />
         </div>
       </div>
