@@ -30,7 +30,7 @@ const ServiceModalDesktop = ({
   return (
     <div
       ref={contentRef}
-      className="hidden lg:grid grid-cols-11 w-[1000px] h-[750px] rounded-3xl overflow-hidden"
+      className="hidden lg:grid grid-cols-11 w-[1000px] max-h-[90vh] rounded-3xl overflow-hidden"
     >
       <div className="relative col-span-6 bg-scnd-blue p-10 pr-0 pt-36">
         <div className="absolute top-24 left-10 flex gap-2">

@@ -25,7 +25,7 @@ const ModalOverlay = (props) => {
   return (
     <div
       ref={modalRef}
-      className={`fixed bottom-0 lg:top-0 lg:right-1/2 lg:translate-x-1/2 lg:translate-y-24 z-50 select-none`}
+      className={`fixed bottom-0 lg:top-0 lg:right-1/2 lg:translate-x-1/2 lg:translate-y-14 z-50 select-none`}
     >
       <div>{props.children}</div>
     </div>
