@@ -21,7 +21,7 @@ const ServiceModalDesktop = ({
     q(".content").forEach((item) => {
       gsap.fromTo(
         item,
-        { yPercent: 10, opacity: 0, duration: 0.3 },
+        { yPercent: 10, opacity: 0, duration: 0.3, ease: "linear" },
         { yPercent: 0, opacity: 1 }
       );
     });

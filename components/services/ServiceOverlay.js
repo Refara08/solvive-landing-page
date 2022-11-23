@@ -17,7 +17,7 @@ const ModalOverlay = (props) => {
   useEffect(() => {
     gsap.fromTo(
       modalRef.current,
-      { yPercent: 10, duration: 0.3 },
+      { yPercent: 10, duration: 0.3, ease: "linear" },
       { yPercent: 0 }
     );
   }, []);
