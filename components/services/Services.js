@@ -1,50 +1,41 @@
+import { useEffect, useState } from "react";
+
 import Card from "../ui/Card";
+import ServiceModal from "./ServiceModal";
+import { servicesCopy } from "../copywriting/service-copy";
 
 const Services = () => {
-  const servicesCopy = [
-    {
-      num: "",
-      text: "Website Services",
-      desktop: {
-        img: "/images/service1-desktop.png",
-        width: "477",
-        height: "450",
-      },
-      mobile: {
-        img: "/images/service1-mobile.png",
-        width: "474",
-        height: "300",
-      },
-    },
-    {
-      num: "",
-      text: "Mobile App Services",
-      desktop: {
-        img: "/images/service2-desktop.png",
-        width: "384",
-        height: "384",
-      },
-      mobile: {
-        img: "/images/service2-mobile.png",
-        width: "351",
-        height: "300",
-      },
-    },
-    {
-      num: "",
-      text: "UI-UX Design Services",
-      desktop: {
-        img: "/images/service3-desktop.png",
-        width: "453",
-        height: "393",
-      },
-      mobile: {
-        img: "/images/service3-mobile.png",
-        width: "441",
-        height: "300",
-      },
-    },
-  ];
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModalHandler = () => {
+    setIsOpen(true);
+  };
+
+  const closeModalHandler = () => {
+    setIsOpen(false);
+  };
+
+  const [initialLoadContent, setInitialLoadContent] = useState(0);
+
+  const changeLoadContentHandler = (num) => {
+    setInitialLoadContent(num);
+  };
+
+  const nextContentHandler = () => {
+    if (initialLoadContent === 2) {
+      setInitialLoadContent((prev) => prev - 2);
+    } else {
+      setInitialLoadContent((prev) => prev + 1);
+    }
+  };
+
+  const previousContentHandler = () => {
+    if (initialLoadContent === 0) {
+      setInitialLoadContent((prev) => prev + 2);
+    } else {
+      setInitialLoadContent((prev) => prev - 1);
+    }
+  };
 
   return (
     <section id="services" className="mb-24">
@@ -56,9 +47,22 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {servicesCopy.map((item, index) => (
-          <Card item={item} key={index} />
+          <Card
+            onOpenModal={openModalHandler}
+            onChangeContent={changeLoadContentHandler}
+            item={item}
+            key={index}
+          />
         ))}
       </div>
+      {isOpen && (
+        <ServiceModal
+          onClose={closeModalHandler}
+          loadedContentIndex={initialLoadContent}
+          onNextContent={nextContentHandler}
+          onPreviousContent={previousContentHandler}
+        />
+      )}
     </section>
   );
 };

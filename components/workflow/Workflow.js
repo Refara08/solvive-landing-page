@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import CardProgress from "../ui/CardProgress";
 
 const Workflow = () => {
   const workflowCopy = [
@@ -56,7 +57,7 @@ const Workflow = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {workflowCopy.map((item, index) => (
-          <Card item={item} key={index} />
+          <CardProgress item={item} key={index} />
         ))}
       </div>
     </section>

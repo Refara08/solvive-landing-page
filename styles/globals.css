@@ -66,3 +66,7 @@ a {
 .checkbox-control label {
   @apply flex items-center justify-center h-full text-sm py-2 px-5 rounded-md cursor-pointer hover:bg-orange-sol transition duration-300;
 }
+
+.button-prime {
+  @apply inline-block bg-orange-sol py-2 px-5 text-center rounded-xl;
+}

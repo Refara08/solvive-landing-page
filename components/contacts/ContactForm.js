@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ContactForm = () => {
+const ContactForm = ({ textAreaRows }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [desc, setDesc] = useState("");
@@ -166,32 +166,33 @@ const ContactForm = () => {
             name="desc"
             id="desc"
             cols="30"
-            rows="5"
+            rows={textAreaRows}
             placeholder="We need help to design..."
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
             required
           />
         </div>
-        {error && (
-          <p className="text-sm bg-white-sol text-red-600 rounded-t-lg py-2 px-4 text-center">
-            {error}
-          </p>
-        )}
-        {success && (
-          <p className="text-sm bg-white-sol text-green-600 rounded-t-lg py-2 px-4 text-center">
-            {success}
-          </p>
-        )}
+
         <button
           className={`${
             loading ? "bg-blue-400" : "bg-orange-sol"
-          } font-bold w-full py-3 rounded-b-md transition duration-300 hover:scale-105 origin-top ${
-            error || success ? "rounded-t-none" : "rounded-t-md"
+          } font-bold w-full py-3 rounded-t-md transition duration-300 hover:scale-105 origin-top ${
+            error || success ? "rounded-b-none" : "rounded-b-md"
           }`}
         >
           {loading ? "Loading..." : "Send Form"}
         </button>
+        {error && (
+          <p className="text-sm bg-white-sol text-red-600 rounded-b-lg py-2 px-4 text-center">
+            {error}
+          </p>
+        )}
+        {success && (
+          <p className="text-sm bg-white-sol text-green-600 rounded-b-lg py-2 px-4 text-center">
+            {success}
+          </p>
+        )}
       </form>
     </div>
   );

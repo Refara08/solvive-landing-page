@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const Card = ({ item, onOpenModal, onChangeContent }) => {
+const CardProgress = ({ item }) => {
   const [isHover, setIsHover] = useState(false);
 
   const onHoverHandler = () => {
@@ -12,14 +12,8 @@ const Card = ({ item, onOpenModal, onChangeContent }) => {
     setIsHover(false);
   };
 
-  const clickHandler = () => {
-    onOpenModal();
-    onChangeContent(parseInt(item.num));
-  };
-
   return (
     <div
-      onClick={clickHandler}
       onMouseOver={onHoverHandler}
       onMouseLeave={onMouseLeaveHandler}
       className={`${
@@ -27,6 +21,7 @@ const Card = ({ item, onOpenModal, onChangeContent }) => {
       } mb-6 grid grid-cols-5 md:grid-cols-2 lg:grid-cols-5 items-center h-[100px] md:h-[125px] lg:h-[150px] overflow-hidden rounded-xl transition duration-300`}
     >
       <div className="px-6 col-span-3 md:col-span-1 lg:col-span-3">
+        {item.num && <h2 className="font-extrabold ">{item.num}</h2>}
         <h3
           className={`leading-5 ${
             isHover && "scale-105"
@@ -63,4 +58,4 @@ const Card = ({ item, onOpenModal, onChangeContent }) => {
   );
 };
 
-export default Card;
+export default CardProgress;
