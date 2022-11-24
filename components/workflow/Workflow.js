@@ -55,7 +55,7 @@ const Workflow = () => {
           We are working in an Agile/Scrum development process
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-4">
         {workflowCopy.map((item, index) => (
           <CardProgress item={item} key={index} />
         ))}

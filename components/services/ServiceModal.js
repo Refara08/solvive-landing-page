@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ServiceOverlay from "./ServiceOverlay";
 import ServiceModalMobile from "./ServiceModalMobile";
 import { servicesDetailCopy } from "../copywriting/service-copy";

@@ -36,14 +36,14 @@ const Card = ({ item, onOpenModal, onChangeContent }) => {
         </h3>
       </div>
       <div className="relative col-span-2 md:col-span-1 lg:col-span-2 h-full w-full">
-        <div className="hidden lg:block absolute bottom-0 right-0 w-full aspect-auto">
+        <div className="hidden lg:block absolute bottom-0 right-0 h-full aspect-[453/450]">
           <Image
             src={item.desktop.img}
             alt={item.text}
             width={item.desktop.width}
             height={item.desktop.height}
             className={`h-full w-full ${
-              isHover && "scale-110"
+              isHover && "scale-110 translate-y-5"
             } origin-bottom-right transition duration-300`}
           />
         </div>
@@ -54,7 +54,7 @@ const Card = ({ item, onOpenModal, onChangeContent }) => {
             width={item.mobile.width}
             height={item.mobile.height}
             className={`h-full w-full ${
-              isHover && "scale-110"
+              isHover && "scale-110 translate-y-3"
             } origin-bottom-right transition duration-300`}
           />
         </div>

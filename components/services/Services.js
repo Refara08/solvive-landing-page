@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Card from "../ui/Card";
 import ServiceModal from "./ServiceModal";
@@ -45,7 +45,7 @@ const Services = () => {
           We are accelerating your digital needs
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-6">
         {servicesCopy.map((item, index) => (
           <Card
             onOpenModal={openModalHandler}

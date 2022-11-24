@@ -17,14 +17,14 @@ const CardProgress = ({ item }) => {
       onMouseOver={onHoverHandler}
       onMouseLeave={onMouseLeaveHandler}
       className={`${
-        isHover ? "bg-orange-sol" : "bg-scnd-blue"
+        isHover ? "bg-orange-sol" : "bg-dark-blue"
       } mb-6 grid grid-cols-5 md:grid-cols-2 lg:grid-cols-5 items-center h-[100px] md:h-[125px] lg:h-[150px] overflow-hidden rounded-xl transition duration-300`}
     >
       <div className="px-6 col-span-3 md:col-span-1 lg:col-span-3">
         {item.num && <h2 className="font-extrabold ">{item.num}</h2>}
         <h3
           className={`leading-5 ${
-            isHover && "scale-105"
+            isHover && "scale-105 "
           } transition duration-300 origin-left`}
         >
           {item.text}
@@ -38,7 +38,7 @@ const CardProgress = ({ item }) => {
             width={item.desktop.width}
             height={item.desktop.height}
             className={`h-full w-full ${
-              isHover && "scale-110"
+              isHover && "scale-110 translate-y-5"
             } origin-bottom-right transition duration-300`}
           />
         </div>
@@ -49,7 +49,7 @@ const CardProgress = ({ item }) => {
             width={item.mobile.width}
             height={item.mobile.height}
             className={`h-full w-full ${
-              isHover && "scale-110"
+              isHover && "scale-110 translate-y-5"
             } origin-bottom-right transition duration-300`}
           />
         </div>

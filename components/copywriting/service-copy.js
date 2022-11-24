@@ -4,7 +4,7 @@ export const servicesCopy = [
     text: "Website Services",
     desktop: {
       img: "/images/service1-desktop.png",
-      width: "477",
+      width: "453",
       height: "450",
     },
     mobile: {
@@ -18,8 +18,8 @@ export const servicesCopy = [
     text: "Mobile App Services",
     desktop: {
       img: "/images/service2-desktop.png",
-      width: "384",
-      height: "384",
+      width: "453",
+      height: "450",
     },
     mobile: {
       img: "/images/service2-mobile.png",
@@ -33,7 +33,7 @@ export const servicesCopy = [
     desktop: {
       img: "/images/service3-desktop.png",
       width: "453",
-      height: "393",
+      height: "450",
     },
     mobile: {
       img: "/images/service3-mobile.png",

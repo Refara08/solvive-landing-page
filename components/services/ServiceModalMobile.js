@@ -8,12 +8,12 @@ const ServiceModalMobile = ({ onClose, content }) => {
       <div className="relative bg-orange-sol">
         <CloseIcon
           size="2em"
-          bgColor="#16263B"
+          bgColor="#E56137"
           onClick={onClose}
           className="absolute top-8 right-6"
         />
         <div className="flex flex-col justify-center items-center py-4">
-          <div className="block w-[20%] h-[3px] bg-white mb-4" />
+          <div className="block w-[10%] h-[3px] bg-white mb-4 rounded-full" />
           <h3 className="heading col-span-8 flex justify-center mb-2">
             {content.title}
           </h3>
