@@ -5,8 +5,8 @@ const ContactSocials = () => {
     {
       tag: "Google",
       icon: "/images/icon-google.png",
-      info: "solvive@gmail.com",
-      link: "mailto:solvive@gmail.com",
+      info: "solvive.id@gmail.com",
+      link: "mailto:solvive.id@gmail.com",
     },
     {
       tag: "Whatsapp",

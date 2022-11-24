@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = ({ textAreaRows }) => {
+  const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [desc, setDesc] = useState("");
@@ -9,6 +11,17 @@ const ContactForm = ({ textAreaRows }) => {
     mobile: false,
     uiux: false,
   });
+
+  const resetInput = () => {
+    setName("");
+    setEmail("");
+    setDesc("");
+    setService({
+      web: false,
+      mobile: false,
+      uiux: false,
+    });
+  };
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -58,13 +71,29 @@ const ContactForm = ({ textAreaRows }) => {
       desc,
     };
 
-    console.log(enteredData);
-    setTimeout(() => {
-      setSuccess(
-        "Your project request has been sent!, we will reach you out through email for further steps!"
+    // console.log(enteredData);
+    emailjs
+      .sendForm(
+        `${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          setSuccess(
+            "Your project request has been sent!, we will reach you out through email for further steps!"
+          );
+          setLoading(false);
+          resetInput();
+        },
+        (error) => {
+          // console.log(error.text);
+          setError(error.text);
+          setLoading(false);
+        }
       );
-      setLoading(false);
-    }, 2000);
   };
 
   return (
@@ -74,7 +103,7 @@ const ContactForm = ({ textAreaRows }) => {
         <span>Get Your Needs Ready</span>
       </h3>
 
-      <form onSubmit={submitHandler} className="mb-24 ">
+      <form ref={form} onSubmit={submitHandler} className="mb-24 ">
         <div className="input-control">
           <label htmlFor="name">Name</label>
           <input
@@ -113,6 +142,7 @@ const ContactForm = ({ textAreaRows }) => {
               type="checkbox"
               name="website"
               id="website"
+              value="Website Service,"
               checked={service.web}
               onChange={() =>
                 setService((prev) => {
@@ -133,6 +163,7 @@ const ContactForm = ({ textAreaRows }) => {
               type="checkbox"
               name="mobile-app"
               id="mobile-app"
+              value="Mobile App Service,"
               checked={service.mobile}
               onChange={() =>
                 setService((prev) => {
@@ -151,6 +182,7 @@ const ContactForm = ({ textAreaRows }) => {
               type="checkbox"
               name="ui-ux"
               id="ui-ux"
+              value="UI/UX Design Service,"
               checked={service.uiux}
               onChange={() =>
                 setService((prev) => {
@@ -175,6 +207,7 @@ const ContactForm = ({ textAreaRows }) => {
         </div>
 
         <button
+          disabled={loading}
           className={`${
             loading ? "bg-blue-400" : "bg-orange-sol"
           } font-bold w-full py-3 rounded-t-md transition duration-300 hover:scale-105 origin-top ${
