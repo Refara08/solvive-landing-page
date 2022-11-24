@@ -32,8 +32,8 @@ const ServiceModalDesktop = ({
       ref={contentRef}
       className="hidden lg:grid grid-cols-11 w-[1000px] max-h-[90vh] rounded-3xl overflow-hidden"
     >
-      <div className="relative col-span-6 bg-scnd-blue p-10 pr-0 pt-36">
-        <div className="absolute top-24 left-10 flex gap-2">
+      <div className="relative col-span-6 bg-scnd-blue p-10 pr-0 pt-[19%]">
+        <div className="absolute top-[8%] left-10 flex gap-2">
           <ArrowLeftIcon size="2em" className="" onClick={onPreviousContent} />
           <ArrowRightIcon size="2em" className="" onClick={onNextContent} />
         </div>
@@ -47,12 +47,12 @@ const ServiceModalDesktop = ({
         </div>
         <DetailsDesktop content={content} />
       </div>
-      <div className="relative col-span-5 bg-dark-blue p-8 pt-24">
+      <div className="relative col-span-5 bg-dark-blue p-8 pt-[10%]">
         <CloseIcon
           onClick={onClose}
           size="2em"
           bgColor="#03142A"
-          className="absolute top-10 right-10"
+          className="absolute top-[5%] right-10"
         />
         <ContactForm textAreaRows="2" />
       </div>
