@@ -51,7 +51,7 @@ const ServiceModalDesktop = ({
         <CloseIcon
           onClick={onClose}
           size="2em"
-          bgColor="#03142A"
+          bgcolor="#03142A"
           className="absolute top-[5%] right-10"
         />
         <ContactForm textAreaRows="2" />

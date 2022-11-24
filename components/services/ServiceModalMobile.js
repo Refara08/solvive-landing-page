@@ -8,7 +8,7 @@ const ServiceModalMobile = ({ onClose, content }) => {
       <div className="relative bg-orange-sol">
         <CloseIcon
           size="2em"
-          bgColor="#E56137"
+          bgcolor="#E56137"
           onClick={onClose}
           className="absolute top-8 right-6"
         />
